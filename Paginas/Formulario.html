@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="../css/AppDePeliculas.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- fontawesome Terminaste -->
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://img.repelis.id/cover/dragon-ball-super-broly.jpg" type="image/x-icon">
+    <!-- Ya Terminaste El Favicon -->
+</head>
+
+<body>
+    <!-- Nav    -->
+    <nav class="Navbar">
+        <h1 class="Titulos">
+            <a href="../html/AppDePeliculas.html" class="Enlaces">Programador Josue</a>
+        </h1>
+    </nav>
+    <!--Terminaste  Nav-->
+    <!-- BR -->
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- TERMINASTE BR -->
+
+    <div class="Grid__Flexbox">
+        <a href="../Paginas/SobreMi.html" accesskey="R"></a>
+
+            <form>
+                <div>
+                    <label class="Label">Nombre:</label>
+                    <input type="text" placeholder="Nombre" class="Input__Formulario" required id="Nombre">
+                </div>
+                <br>
+                <div>
+                    <label class="Label">Apellido:</label>
+                    <input type="text" placeholder="Apellido" class="Input__Formulario" required id="Apellido">
+                </div>
+                <br>
+                <br>
+                <div>
+
+                    <label class="Label">Email:</label>
+                    <input type="email" placeholder="Email" class="Input__Formulario" required id="Email">
+                </div>
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <br>
+                <div>
+                    <label class="Label">Mensaje:</label>
+                    <textarea required class="Textarea" placeholder="Mensajes" id="Textareas"></textarea>
+                </div>
+                <br>
+                <div>
+
+
+                    <button class="Comprar" onclick="return Validarlo()">
+                        Comprar
+                    </button>
+
+
+                    <br>
+                    <br>
+
+                    <p id="Resultado" class="Peliculas"></p>
+                </div>
+            </form>
+
+            <br>
+            <br>
+            <br> <br>
+            <br> <br>
+            <br> <br>
+            <br> <br>
+            <br>
+
+    </div>
+    <script>
+        const Nombre = document.querySelector('#Nombre');
+        const Apellido = document.querySelector('#Apellido');
+        const Email = document.querySelector('#Email');
+        const Resultado = document.querySelector('#Resultado');
+        const Textareas = document.querySelector('#Textareas');
+        Resultado.style.color = 'blue';
+
+
+        function Validarlo() {
+
+
+            var MensajeDeError = [];
+
+            if (Nombre.value === null || Nombre.value === '') {
+                MensajeDeError.push('Ingresa Tus Datos')
+            }
+
+            if (Apellido.value === null || Apellido.value === '') {
+                MensajeDeError.push('Ingresa Tus Apellido')
+            }
+
+
+            if (Email.value === null || Email.value === '') {
+                MensajeDeError.push('Ingresa Tus Email ')
+            }
+            if (Textareas.value === null || Textareas.value === '') {
+                MensajeDeError.push('Ingresa Tus Texto ')
+            }
+            //   _________________________________________________
+
+            if (Nombre.value === null || Nombre.value === 'Josue') {
+                MensajeDeError.push('Exito, La Compra Esta En Camino. ')
+            }
+
+            if (Apellido.value === null || Apellido.value === 'Rodriguez') {
+                MensajeDeError.push('')
+            }
+
+
+            if (Email.value === null || Email.value === 'josuerodriguezfasa@gmail.com') {
+                MensajeDeError.push('')
+            }
+            if (Textareas.value === null || Textareas.value === 'Quiero Ver La Pelicula') {
+                MensajeDeError.push('')
+            }
+
+
+
+            Resultado.innerHTML = MensajeDeError
+
+
+            return false;
+        }
+    </script>
+
+</body>
+
+</html> 
