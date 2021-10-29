@@ -11,8 +11,7 @@ const Peliculas = [{
     {
         Nombre: 'Dragon Ball Super: Broly',
         Img: 'https://img.repelis.id/cover/dragon-ball-super-broly.jpg',
-
-
+        Botton: '../Paginas/AppDeInformacion.html'
     },
     {
         Nombre: 'Super Dragon Ball Heroes',
@@ -22,7 +21,7 @@ const Peliculas = [{
     {
         Nombre: 'Dragon Ball Super ',
         Img: 'https://img.repelis.id/cover/dragon-ball-super.png',
-
+        Botton: '../Paginas/AppDeInformacion.html'
     },
     {
         Nombre: 'Venom 2: Habrá Matanza',
@@ -33,9 +32,7 @@ const Peliculas = [{
     {
         Nombre: 'Venom',
         Img: 'https://img.repelis.id/cover/venom.jpg',
-        Botton: '../Paginas/Info.html'
-
-
+        Botton: '../Paginas/Info.html',
     },
     {
         Nombre: 'Verdad o Reto ',
@@ -44,35 +41,38 @@ const Peliculas = [{
     },
     {
         Nombre: 'Dragonball Evolución',
-        Img: 'https://img.repelis.id/cover/dragonball-evolucion.jpg'
+        Img: 'https://img.repelis.id/cover/dragonball-evolucion.jpg',
+        Botton: '../Paginas/AppDeInformacion.html'
     },
 
     {
         Nombre: 'Sabrina',
         Img: 'https://img.repelis.id/cover/sabrina.jpg',
-        Botton: '/Paginas/Apps_De_Info.html'
+        Botton: '../Paginas/Apps_De_Info.html'
     },
     {
         Nombre: 'El Mundo Oculto de Sabrina  ',
         Img: 'https://img.repelis.id/cover/el-mundo-oculto-de-sabrina.jpg',
-        Botton: '../Paginas/Apps_De_Informacion.html'
+        Botton: '../Paginas/AppDeInformacion.html'
     },
     {
         Nombre: 'Sabrina, La Bruja Adolescente ',
-        Img: 'https://img.repelis.id/cover/sabrina-la-bruja-adolescente.jpg'
+        Img: 'https://img.repelis.id/cover/sabrina-la-bruja-adolescente.jpg',
+        Botton: '../Paginas/AppDeInformacion.html'
     },
     {
-        Nombre: 'Shang-Chi y la leyenda de los Diez Anillos ',
+        Nombre: 'Shang-Chi  ',
         Img: 'https://img.repelis.id/cover/shang-chi-and-the-legend-of-the-ten-rings-2-1630734122.jpg',
         Botton: '../Paginas/AppDeInformaciones.html'
 
     },
     {
         Nombre: 'Los 100',
-        Img: 'https://img.repelis.id/cover/los-100.jpg'
+        Img: 'https://img.repelis.id/cover/los-100.jpg',
+        Botton: '../Paginas/AppDeInformacion.html'
     },
     {
-        Nombre: 'El inglés que cogió la maleta y se fue al fin del mundo',
+        Nombre: 'El inglés que cogió la maleta ',
         Img: 'https://img.repelis.id/cover/the-last-bus-2-1633998605.jpg',
         Botton: '../Paginas/ArticulosDePeliculas.html'
     },
@@ -84,7 +84,9 @@ const Peliculas = [{
     },
     {
         Nombre: 'Una Momia en Halloween',
-        Img: 'https://img.repelis.id/cover/under-wraps-2-1633998604.jpg'
+        Img: 'https://img.repelis.id/cover/under-wraps-2-1633998604.jpg',
+        Botton: '../Paginas/AppDeInformacion.html'
+
     },
     {
         Nombre: 'Battered',
@@ -123,16 +125,16 @@ const Peliculas = [{
     {
         Nombre: 'Hiacynt',
         Img: 'https://img.repelis.id/cover/hiacynt-2-1634194087.jpg',
+        Botton: '../Paginas/AppDeInformacion.html'
 
-
-    }
+    }   
 ];
 
 
 
 const Formulario = document.querySelector('#Formulario');
 
-// const Button = document.querySelector('#Button');
+
 
 
 const Resultado = document.querySelector('#Resultado');
@@ -149,68 +151,36 @@ const Filtrar = () => {
         let Nombre = Pelicula.Nombre.toLowerCase();
 
         if (Nombre.indexOf(Texto) !== -1) {
-            Resultado.innerHTML += `
-
-         
-          
-         
-       
-      
-            <p class="Parrafos">                 
-                    <img class='Imageness' src=${Pelicula.Img} alt="Peliculas">  
-                    <br>
-                    <br>    
-             
-           
-              
-                       ${Pelicula.Nombre}
-         
-                  
-            
-                    <br>
-                    <br>   
-            
-                       <a href=${Pelicula.Botton}>
- 
-
+            Resultado.innerHTML += `                                   
+           <div class='Concurso'>
+                <p class="Parrafos">                 
+                <img class='Imageness' src=${Pelicula.Img} alt="Peliculas">  
+                <br>
+                <br> 
+                   
+                    ${Pelicula.Nombre} 
+                <br>
+                <br>   
                 
-
-                         
-                        <button class="Boton">Ver Informacion </button> 
-                
-              
+                    <a href=${Pelicula.Botton}>                 
+                    <button class="Boton">Ver Informacion </button> 
                     <br>
-                    <br>   
-    
-                    </a>
-
-                   
+                    <br>  
                     <br>
-                    <br>
-            </p>
-
-      
-
-
-                   
-       
-                   
-            
+                     
+                </a>
+                </p>
+           </div>
         `
         };
     };
     if (Resultado.innerHTML === '') {
         Resultado.innerHTML += `
-
         <h3 class="Series">Pelicula No Encontrado</h3>
-        
-    `
+        `
     };
-
-
 };
-
 Formulario.addEventListener('click', Filtrar);
 Formulario.addEventListener('keyup', Filtrar);
-
 Filtrar();
+

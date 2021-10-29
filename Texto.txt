@@ -1,0 +1,6 @@
+<footer class="Foooters">
+    <h1 class="FoootersTitulos">
+         Gracias A Mi Tio Ronald Por La Wnseñanza Aprendida Gracias A Ello Hoy En Dia Estoy Logrando Ser Un
+         Programador 😀 😀 😀 
+    </h1>
+</footer>

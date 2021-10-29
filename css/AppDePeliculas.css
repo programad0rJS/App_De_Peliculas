@@ -10,11 +10,12 @@
      padding: 0;
      margin: 0;
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     scroll-behavior: smooth;
 
  }
 
  body {
-     /* scroll-behavior: smooth;  */
+
 
      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
@@ -22,8 +23,9 @@
  .Navbar {
      position: fixed;
      padding: 43px;
-     background-color: red;
+     background-color: #6271ed;
      width: 4999px;
+     height: 30px;
  }
 
  .Buscar {
@@ -74,7 +76,10 @@
      text-decoration: none;
      color: white;
      font-weight: 900;
-     font-family: Arial, Helvetica, sans-serif;
+     font-family: sans-serif;
+
+     text-transform: uppercase;
+
  }
 
  input::placeholder {
@@ -87,26 +92,29 @@
  .Margenes {
      padding: 29px;
 
-
  }
 
  .Imageness {
+
      width: 200px;
+
  }
+
 
  .Boton {
      color: white;
-     background-color: black;
-     border: 19px solid black;
+     background-color: #9F59F7;
+     border: 19px solid #9F59F7;
      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
      border-radius: 10px;
+     transition: background-color, 3s;
  }
 
  .Boton:hover {
 
-     background-color: yellow;
+     background-color: #59BCF7;
      color: white;
-     border: 19px solid yellow;
+     border: 19px solid #59BCF7;
 
 
  }
@@ -120,79 +128,53 @@
 
 
  .Imageness:hover {
-
-     clip-path: ellipse(50% 50% at 50% 50%);
+     border: 2px solid;
+     border-color: blue;
  }
 
  .Label {
      position: relative;
      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     left: -299px;
+     left: -199px;
+     text-transform: uppercase;
+     color: blue;
+     text-decoration: underline 8px;
+     text-decoration-color: red;
+     text-decoration-style: dotted;
  }
 
- .Grid__Flexbox {
+ .Input_Form {
      position: relative;
-     left: 599px;
+     left: 43px;
+     width: 600px;
+     padding: 200px;
+     caret-color: blue;
+     padding: 10px;
+     border-radius: 5px;
+     outline: none;
  }
 
- .Comprar {
+ .Input_Form:focus {
+     border-color: #51fafa;
+     box-shadow: 5px 8px 19px #51fafa;
+
+
+ }
+
+ .Submits {
+     border: 2px solid #6271ed;
+     background: #6271ed;
      color: white;
-     border: 9px solid black;
-     background-color: black;
+     border-radius: 5px;
+     padding: 10px;
      position: relative;
-     left: -30px;
-     top: 9px;
-
- }
-
- .Input__Formulario {
-     width: 399px;
-     height: 40px;
-     font-size: 19px;
-     border-radius: 20px;
-     outline: none;
-     caret-color: yellow;
-
- }
-
- .Input__Formulario:focus {
-     border-color: #66afe9;
-     outline: 0;
-     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 48px rgba(102, 175, 233, .6);
-
- }
-
- input::placeholder {
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     text-align: center;
-     color: blue;
- }
-
- .Textarea {
-     width: 399px;
-     height: 40px;
-     font-size: 40px;
-     border-radius: 20px;
-     outline: none;
-     caret-color: yellow;
- }
-
- .Textarea:focus {
-     border-color: #66afe9;
-     outline: 0;
-     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 48px rgba(102, 175, 233, .6);
-
- }
-
- textarea::placeholder {
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     text-align: center;
-     color: blue;
+     left: -270px;
  }
 
  .Peliculas {
+
+     color: #6271ed;
      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     color: black;
  }
 
  /* Sidenav */
@@ -255,7 +237,8 @@
 
      display: grid;
      /* grid-template-columns: auto auto auto auto; */
-     grid-template-columns: repeat(2, 1fr);
+     grid-template-columns: repeat(5, 1fr);
+
      /* grid-template-rows: 200px 300px; */
      /* grid-gap: 90px; */
 
@@ -344,9 +327,53 @@
 
  .InformacionesSobreJosue {
      border-radius: 30px;
-     border: 7px solid greenyellow;
-     width: 350px;
-     height: 310px;
+
+     width: 290px;
 
 
+
+ }
+
+ ::-webkit-scrollbar {
+     width: 8px;
+     height: 9px;
+
+
+ }
+
+ ::-webkit-scrollbar-thumb {
+     background: gray;
+     border-radius: 120px;
+ }
+
+ ::-webkit-scrollbar-track {
+     background: white;
+ }
+
+ .ScrollDos {
+     position: fixed;
+     bottom: 40px;
+     right: 40px;
+     font-size: 22px;
+     width: 50px;
+     height: 50px;
+     background: #e74c3c;
+     display: none;
+     border: none;
+ }
+
+
+ .Foooters {
+     background: #6271ed;
+     padding: 50px;
+
+
+ }
+
+ .FoootersTitulos {
+     color: white;
+     letter-spacing: 3px;
+     font-family: sans-serif;
+     font-size: large;
+     text-transform: uppercase;
  }
